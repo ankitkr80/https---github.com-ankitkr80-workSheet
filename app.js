@@ -27,7 +27,12 @@ app.use(cors());
 app.use("/api", routes);
 
 
-
+app.use("/",(req, res)=>{
+  res.json({
+    status:"api working",
+    code:200
+  }
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
